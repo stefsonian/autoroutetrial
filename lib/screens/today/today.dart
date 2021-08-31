@@ -35,11 +35,12 @@ class _TodayState extends State<Today> {
                   title: Text('Expense $index'),
                   subtitle: Text('Amount: \$$amount.00'),
                   onTap: () => context.pushRoute(
-                    ExpenseDetailRouter(
+                    ExpenseDetailRouterFullScreen(
                       expenseId: index.toString(),
                       amount: amount,
                     ),
                   ),
+                  // onTap: () => context.router.pushNamed('details/$index'),
                 );
               },
             ),
